@@ -1,4 +1,4 @@
-![Logo](public/images/favicon.png)
+![Logo](public/images/logo.png)
 
 # My-Portfolio
 This is the backstage pass to my personal portfolio. Check out the live action below!
