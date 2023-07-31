@@ -7,6 +7,7 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://kit.fontawesome.com/e30eb907c6.js" crossorigin="anonymous"></script>
    <meta name="description" content="" />
    <meta name="keywords" content="" />
    <meta name="author" content="" />
@@ -91,9 +92,9 @@
          <div class="flexslider js-fullheight">
             <!-- Social -->
             <ul class="list-unstyled ml-5 mt-3 position-relative social-links">
+               <li class="mb-3"><a id="modeToggle" style="cursor: pointer;"><i class="fa-solid fa-sun" style="color: #ffffff;"></i></a></li>
                <li class="mb-3"><a href="https://www.facebook.com/mekadariya"><i class="fab fa-facebook-f"></i></a></li>
                <li class="mb-3"><a href="https://www.github.com/suyogkad"><i class="fab fa-github"></i></a></li>
-               <li class="mb-3"><a href="https://www.twitter.com/mekadariya"><i class="fab fa-twitter"></i></a></li>
                <li class="mb-3"><a href="https://www.linkedin.com/in/suyog-kadariya"><i class="fab fa-dribbble"></i></a></li>
                <li class="mb-3"><a href="https://www.instagram.com/kadtreides_"><i class="fab fa-instagram"></i></a></li>
             </ul>
@@ -294,6 +295,19 @@
             </div>
          </div>
 
+<!-- script to turn into light mode -->
+<script type="text/javascript">
+   document.getElementById("modeToggle").addEventListener("click", function() {
+       let currentURL = window.location.href;
+       let splitURL = currentURL.split('/');
+       let file = splitURL[splitURL.length - 1];
+       if (currentURL.includes('/light/')) {
+           window.location.href = currentURL.replace('/light/', '/');  // switch to dark mode
+       } else {
+           window.location.href = currentURL.replace(file, 'light/' + file);  // switch to light mode
+       }
+   });
+</script>      
          
          <!-- Footer -->
          <footer>

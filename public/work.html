@@ -259,6 +259,20 @@
             });
         </script>
 
+                                  <!-- script to turn into light mode -->
+                                  <script type="text/javascript">
+                                    document.getElementById("modeToggle").addEventListener("click", function() {
+                                        let currentURL = window.location.href;
+                                        let splitURL = currentURL.split('/');
+                                        let file = splitURL[splitURL.length - 1];
+                                        if (currentURL.includes('/light/')) {
+                                            window.location.href = currentURL.replace('/light/', '/');  // switch to dark mode
+                                        } else {
+                                            window.location.href = currentURL.replace(file, 'light/' + file);  // switch to light mode
+                                        }
+                                    });
+                                </script>
+
         <!-- Footer -->
         <footer>
          <div id="footer">
